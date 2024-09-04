@@ -2,3 +2,5 @@
 /.zig-cache/
 /wdwmgr/.zig-cache/
 /wdwmgr/.zig-cache/h/
+/wdwmgr/zig-out/lib/libwdwmgr.a
+/wdwmgr/zig-out/bin/wdwmgr
