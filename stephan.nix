@@ -7,7 +7,12 @@
 
 
 { config, lib, pkgs, ... }:
+
 let
+imports =
+    [ # Include the results of the hardware scan.
+      <home-manager/nixos>
+    ];
   home-manager = builtins.fetchTarball {
     url = "https://github.com/nix-community/home-manager/archive/release-24.05.tar.gz";
     sha256 = "sha256-hash-of-the-tarball";
