@@ -196,12 +196,7 @@ imports =
     enable = true;
     xwayland.enable = true;
   };
-  system.userActivationScripts.linktosharedfolder.text = ''
-  if [[ ! -h "$HOME/.config/hypr/hyprland.conf" ]]; then
-    mkdir $HOME/.config/hypr	
-    ln -s  "$HOME/nixos-config/hyprland.conf" "$HOME/.config/hypr/hyprland.conf"
-  fi
-  '';
+  
   boot.initrd.kernelModules = [ "amdgpu" ];
   services.xserver.videoDrivers = [ "amdgpu" ];
 
