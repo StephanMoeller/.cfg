@@ -219,6 +219,7 @@ imports =
     nb = "sudo nix-channel --update\nsudo nixos-rebuild switch";
     cf = "git --git-dir=$HOME/dotfiles/ --work-tree=$HOME";
     rswap = "rm ~/.local/state/nvim/swap/*.swp";
+    cl = "clear";
   };
 
   # Auto discovery of printers:
