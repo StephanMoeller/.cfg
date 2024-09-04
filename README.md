@@ -1,5 +1,23 @@
-# nixos-config
+# clone this repo like this:
 
-    sudo cp /etc/nixos/configuration.nix /etc/nixos/configuration.nix_backup
-    sudo rm /etc/nixos/configuration.nix
-    ln -s /home/stephan/nixos-config/configuration.nix /etc/nixos/configuration.nix
+mkdir ~/.cfg
+cd ~/.cfg
+git clone (...this repo...)
+
+# update nixos-config/configuration.nix to contain exactly this:
+{ config, lib, pkgs, ... }:
+{
+  imports =
+    [ # Include the results of the hardware scan.
+      /etc/nixos/hardware-configuration.nix
+      <home-manager/nixos>
+      /home/stephan/.cfg/stephan.nix
+    ];
+}
+
+# run a nixos build:
+sudo nix-channel --update
+sudo nixos-rebuild switch
+
+# after the first build, future rebuilds can be run by simply running:
+nb
