@@ -130,12 +130,14 @@ imports =
      pkgs.waybar
      pkgs.neovim
      pkgs.jetbrains.rider
+     pkgs.gnumake
      pkgs.go
      pkgs.toybox #to provide pgrep
      pkgs.rustc
      pkgs.cargo
      pkgs.jetbrains.goland
      pkgs.kitty
+     unstable.zig
 # chatgpt told me to add those: https://chatgpt.com/c/358f8650-7df3-4c60-920c-409912acee4a
      wmctrl
      xdotool
