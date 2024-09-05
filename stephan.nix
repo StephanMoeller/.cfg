@@ -222,6 +222,8 @@ imports =
     cf = "git --git-dir=$HOME/dotfiles/ --work-tree=$HOME";
     rswap = "rm ~/.local/state/nvim/swap/*.swp";
     cl = "clear";
+    qb = "qmk flash -kb bastardkb/skeletyl/v2/splinky_3  -km  rollercole_bodge_version";
+    cc = "cd ~/.cfg";
   };
 
   # Auto discovery of printers:
