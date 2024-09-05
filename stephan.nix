@@ -5,7 +5,9 @@
 # sudo nix-channel --add https://nixos.org/channels/nixos-unstable nixos-unstable
 # sudo nix-channel --update nixos-unstable
 
-
+#eval $(ssh-agent)
+#ssh-add ...
+#test
 { config, lib, pkgs, ... }:
 
 let
