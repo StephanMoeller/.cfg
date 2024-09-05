@@ -82,6 +82,11 @@ imports =
     #media-session.enable = true;
   };
 
+  # enable automount usb in hyperland - https://discourse.nixos.org/t/how-to-automatically-mount-external-hard-drive/15563
+  services.devmon.enable = true;
+  services.gvfs.enable = true;
+  services.udisks2.enable = true;
+
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
