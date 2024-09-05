@@ -137,6 +137,7 @@ imports =
      pkgs.fzf
      pkgs.waybar
      pkgs.neovim
+     pkgs.xclip # clipboard for neovim
      pkgs.jetbrains.rider
      pkgs.gnumake
      pkgs.go
