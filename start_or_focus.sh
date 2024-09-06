@@ -1,11 +1,6 @@
 
-echo "$1"
-workspace="$1"
-windowname="$2"
-startcommand="$3"
-multi="$4"
-
-hyprctl dispatch workspace $workspace
+windowname="$1"
+startcommand="$2"
 
 # Check if program is running
 if hyprctl clients | grep class | grep $windowname > /dev/null; then

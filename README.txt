@@ -1,3 +1,10 @@
+
+TODO:
+
+Setup qmk to have easy workspace switching and move-around-logic
+
+
+
 # install git and add the ssh key from github to a location and then create this file:
 
 ~/.ssh/config
