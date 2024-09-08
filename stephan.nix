@@ -135,7 +135,7 @@ imports =
      pkgs.keychain
      pkgs.fuzzel
      pkgs.fzf
-     #pkgs.waybar
+     pkgs.waybar
      pkgs.neovim
      pkgs.xclip # clipboard for neovim
      pkgs.jetbrains.rider

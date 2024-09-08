@@ -1,2 +1,3 @@
 Change alacritty config dir using env files
+learn tmux
 
