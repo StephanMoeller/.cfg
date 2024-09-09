@@ -7,6 +7,7 @@ if hyprctl clients | grep class | grep $windowname > /dev/null; then
     echo "focused"
     # If Discord is running, find the window and focus it
     hyprctl dispatch focuswindow $windowname
+    hyprctl dispatch bringactivetotop 
 else
     # If Discord is not running, start it
     echo "starting"
