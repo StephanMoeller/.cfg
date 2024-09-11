@@ -22,6 +22,9 @@ mkdir ~/.cfg
 cd ~/.cfg
 git clone (...this repo...)
 
+# create symlinks:
+ln -s ~/.cfg/waybar ~/.config/waybar
+
 # update nixos-config/configuration.nix to contain exactly this:
 { config, lib, pkgs, ... }:
 {
