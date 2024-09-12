@@ -139,6 +139,7 @@ imports =
      pkgs.neovim
      pkgs.xclip # clipboard for neovim
      pkgs.jetbrains.rider
+     pkgs.jetbrains.rust-rover
      pkgs.gnumake
      pkgs.go
      pkgs.toybox #to provide pgrep
