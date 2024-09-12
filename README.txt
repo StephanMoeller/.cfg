@@ -25,6 +25,7 @@ git clone (...this repo...)
 # create symlinks:
 ln -s ~/.cfg/waybar ~/.config/waybar
 ln -s ~/.cfg/hypr ~/.config/hypr
+ln -s ~/.cfg/alacritty ~/.config/alacritty
 
 # update nixos-config/configuration.nix to contain exactly this:
 { config, lib, pkgs, ... }:
