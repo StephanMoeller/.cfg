@@ -235,6 +235,7 @@ imports =
     cc = "cd ~/.cfg";
   };
 
+
   # Auto discovery of printers:
   services.avahi.enable = true;
   services.avahi.nssmdns4 = true;
