@@ -123,6 +123,7 @@ imports =
   environment.systemPackages = with pkgs; [
      vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
      wget
+     pkgs.input-remapper
      pkgs.google-chrome
      pkgs.discord
      pkgs.spotify
@@ -156,6 +157,8 @@ imports =
      docker
      inetutils
      pkgs.dotnetCorePackages.sdk_8_0_2xx
+     pkgs.unzip # required by nvim kickstart
+     pkgs.gcc # required by nvim kickstart
   ];
 
 
