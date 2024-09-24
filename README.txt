@@ -26,6 +26,7 @@ git clone (...this repo...)
 ln -s ~/.cfg/waybar ~/.config/waybar
 ln -s ~/.cfg/hypr ~/.config/hypr
 ln -s ~/.cfg/alacritty ~/.config/alacritty
+ln -s ~/.cfg/nvim ~/.config/nvim
 
 # update nixos-config/configuration.nix to contain exactly this:
 { config, lib, pkgs, ... }:
