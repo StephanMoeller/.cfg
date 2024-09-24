@@ -137,7 +137,6 @@ imports =
      pkgs.fuzzel
      pkgs.fzf
      pkgs.waybar
-     pkgs.neovim
      pkgs.xclip # clipboard for neovim
      pkgs.jetbrains.rider
      pkgs.jetbrains.rust-rover
@@ -157,7 +156,9 @@ imports =
      docker
      inetutils
      pkgs.dotnetCorePackages.sdk_8_0_2xx
+     unstable.neovim # required by nvim kickstart
      pkgs.unzip # required by nvim kickstart
+     pkgs.ripgrep # required by nvim kickstart
      pkgs.gcc # required by nvim kickstart
   ];
 
