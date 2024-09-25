@@ -237,6 +237,7 @@ imports =
     cl = "clear";
     qb = "qmk flash -kb bastardkb/skeletyl/v2/splinky_3  -km  rollercole_bodge_version";
     cc = "cd ~/.cfg";
+    sn = "cd ~/stendorf-dotfiles/dotfiles/.config/nvim";
   };
 
 
