@@ -932,7 +932,7 @@ require('lazy').setup({
 })
 require('neo-tree').setup({
   filesystem = {
-    follow_current_file = true,  -- This will highlight the file in the tree
+    follow_current_file = {enabled = true},  -- This will highlight the file in the tree
     hijack_netrw_behavior = "open_default",  -- Adjust based on your preference
     use_libuv_file_watcher = true,  -- Optional: auto-refreshes the tree
   },
