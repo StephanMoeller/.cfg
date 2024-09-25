@@ -901,7 +901,6 @@ require('lazy').setup({
   -- require 'kickstart.plugins.autopairs',
   require 'kickstart.plugins.neo-tree',
 
-vim.keymap.set('n', '<leader>fr', ':Neotree reveal<CR>', {})
   -- require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
 
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
@@ -931,6 +930,13 @@ vim.keymap.set('n', '<leader>fr', ':Neotree reveal<CR>', {})
     },
   },
 })
-
+require('neo-tree').setup({
+  filesystem = {
+    follow_current_file = true,  -- This will highlight the file in the tree
+    hijack_netrw_behavior = "open_default",  -- Adjust based on your preference
+    use_libuv_file_watcher = true,  -- Optional: auto-refreshes the tree
+  },
+  -- Other configurations...
+})
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
