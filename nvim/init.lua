@@ -177,8 +177,10 @@ vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagn
 -- NOTE: This won't work in all terminal emulators/tmux/etc. Try your own mapping
 -- or just use <C-\><C-n> to exit terminal mode
 vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
-vim.keymap.set('n', '<a-e>', ':Neotree toggle<Enter>', { desc = 'Show files' })
-vim.keymap.set('n', '<a-b>', ':Neotree toggle buffers right<Enter>', { desc = 'Show buffers' })
+vim.keymap.set('n', '<a-e>', ':Neotree focus<Enter>', { desc = 'Show files' })
+vim.keymap.set('n', '<a-b>', ':Neotree focus buffers right<Enter>', { desc = 'Show buffers' })
+vim.keymap.set('n', '<c-s>', ':w<Enter>', { desc = 'Save current doc' })
+vim.keymap.set('n', '<c-w>', ':wq<Enter>', { desc = 'Save and quit' })
 
 -- TIP: Disable arrow keys in normal mode
 -- vim.keymap.set('n', '<left>', '<cmd>echo "Use h to move!!"<CR>')
@@ -291,7 +293,7 @@ require('lazy').setup({
           Left = '<Left> ',
           Right = '<Right> ',
           C = '<C-…> ',
-          M = '<M-…> ',
+           M = '<M-…> ',
           D = '<D-…> ',
           S = '<S-…> ',
           CR = '<CR> ',
@@ -927,6 +929,8 @@ require('lazy').setup({
   -- require 'kickstart.plugins.lint',
   -- require 'kickstart.plugins.autopairs',
   require 'kickstart.plugins.neo-tree',
+
+vim.keymap.set('n', '<leader>fr', ':Neotree reveal<CR>', {})
   -- require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
 
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
