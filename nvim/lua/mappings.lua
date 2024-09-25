@@ -14,8 +14,6 @@ vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagn
 vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
 vim.keymap.set('n', '<a-e>', ':Neotree focus<Enter>', { desc = 'Show files' })
 vim.keymap.set('n', '<a-b>', ':Neotree focus buffers right<Enter>', { desc = 'Show buffers' })
-vim.keymap.set('n', '<c-s>', ':w<Enter>', { desc = 'Save current doc' })
-vim.keymap.set('n', '<c-w>', ':wq<Enter>', { desc = 'Save and quit' })
 
 
 -- Keybinds to make split navigation easier.
