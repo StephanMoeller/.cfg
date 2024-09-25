@@ -39,8 +39,8 @@ vim.keymap.set('n', '<C-Up>', '<C-w><C-k>', { desc = 'Move focus to the upper wi
 -- PROGRAMMING: Add comma and semicolon to the end of the current line
 vim.keymap.set('n', ';', 'mzA;<Esc>`z<Down>', { desc = 'Add ; to the end of the current line' })
 vim.keymap.set('n', ',', 'mzA,<Esc>`z<Down>', { desc = 'Add ; to the end of the current line' })
-vim.keymap.set('n', 'K', 'mzJ`z', { desc = 'Split lines' })
-vim.keymap.set('n', 'k', 'f,wi<enter><esc>', { desc = 'Join lines' })
+vim.keymap.set('n', 'K', 'mzJ`z', { desc = 'Join lines' })
+vim.keymap.set('n', 'k', 'f,wi<enter><esc>', { desc = 'Split lines' })
 vim.keymap.set('n', 'U', '<c-r>', { desc = 'Redo' })
 vim.keymap.set('n', '<leader>y', '"+y', { desc = 'Copy to clipboard' })
 vim.keymap.set('v', '<leader>y', '"+y', { desc = 'Copy to clipboard' })
