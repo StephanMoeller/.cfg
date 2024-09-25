@@ -12,8 +12,9 @@ vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagn
 -- NOTE: This won't work in all terminal emulators/tmux/etc. Try your own mapping
 -- or just use <C-\><C-n> to exit terminal mode
 vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
-vim.keymap.set('n', '<a-e>', ':Neotree focus<Enter>', { desc = 'Show files' })
-vim.keymap.set('n', '<a-b>', ':Neotree focus buffers right<Enter>', { desc = 'Show buffers' })
+vim.keymap.set('n', '<a-e>', ':Neotree toggle<Enter>', { desc = 'Show files' })
+vim.keymap.set('n', '<a-b>', ':Neotree toggle buffers right<Enter>', { desc = 'Show buffers' })
+
 vim.keymap.set('n', '<C-M-PageUp>', ':bprevious<CR>', { desc = 'Move focus to the upper window' })
 vim.keymap.set('n', '<C-M-PageDown>', ':bnext<CR>', { desc = 'Move focus to the upper window' })
 

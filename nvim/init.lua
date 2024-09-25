@@ -935,8 +935,16 @@ require('neo-tree').setup({
     follow_current_file = {enabled = true},  -- This will highlight the file in the tree
     hijack_netrw_behavior = "open_default",  -- Adjust based on your preference
     use_libuv_file_watcher = true,  -- Optional: auto-refreshes the tree
+    visible = true, -- This is what you want: If you set this to `true`, all "hide" just mean "dimmed out"
+
   },
   -- Other configurations...
 })
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
+--
+
+
+-- Show neotree and buffers at startup
+vim.cmd("Neotree")
+vim.cmd("Neotree buffers right")
