@@ -236,6 +236,7 @@ imports =
     rswap = "rm ~/.local/state/nvim/swap/*.swp";
     cl = "clear";
     qb = "qmk flash -kb bastardkb/skeletyl/v2/splinky_3  -km  rollercole_bodge_version";
+    bb = "qmk flash -kb dasbob -km rollercole";
     cc = "cd ~/.cfg";
     sn = "cd ~/stendorf-dotfiles/dotfiles/.config/nvim";
   };
