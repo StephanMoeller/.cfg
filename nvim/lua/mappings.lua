@@ -11,9 +11,10 @@ vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagn
 --
 -- NOTE: This won't work in all terminal emulators/tmux/etc. Try your own mapping
 -- or just use <C-\><C-n> to exit terminal mode
-vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
-vim.keymap.set('n', '<a-e>', ':Neotree toggle<Enter>', { desc = 'Show files' })
-vim.keymap.set('n', '<a-b>', ':Neotree toggle buffers right<Enter>', { desc = 'Show buffers' })
+
+vim.keymap.set('n', '<a-e>', ':Neotree<Enter>', { desc = 'Show files' })
+vim.keymap.set('n', '<a-b>', ':Neotree buffers right<Enter>', { desc = 'Show buffers' })
+--vim.keymap.set('n', '<escape>', ':echo "esc!"', { desc = 'Show files' })
 
 vim.keymap.set('n', '<C-M-PageUp>', ':bprevious<CR>', { desc = 'Move focus to the upper window' })
 vim.keymap.set('n', '<C-M-PageDown>', ':bnext<CR>', { desc = 'Move focus to the upper window' })
@@ -23,10 +24,10 @@ vim.keymap.set('n', '<C-M-PageDown>', ':bnext<CR>', { desc = 'Move focus to the 
 --  Use CTRL+<hjkl> to switch between windows
 --
 --  See `:help wincmd` for a list of all window commands
-vim.keymap.set('n', '<C-Left>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
-vim.keymap.set('n', '<C-Right>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
-vim.keymap.set('n', '<C-Down>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
-vim.keymap.set('n', '<C-Up>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
+vim.keymap.set('n', '<s-Left>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
+vim.keymap.set('n', '<s-Right>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
+vim.keymap.set('n', '<s-Down>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
+vim.keymap.set('n', '<s-Up>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
 
 
@@ -61,10 +62,10 @@ vim.keymap.set('v', '<End>', 'g_', { desc = 'End => last non space' })
 vim.keymap.set('i', '<End>', '<esc>g_a', { desc = 'End => last non space' })
 vim.keymap.set('n', '<c-a>', 'ggvG', { desc = 'Select all' })
 vim.keymap.set('n', '<c-z>', 'zz', { desc = 'Select all' })
-vim.keymap.set('n', '<c-Up>', '<c-u>zz', { desc = 'Navigate with crlt arrows instead of c-d and c-u' })
-vim.keymap.set('v', '<c-Up>', '<c-u>zz', { desc = 'Navigate with crlt arrows instead of c-d and c-u' })
-vim.keymap.set('n', '<c-Down>', '<c-d>zz', { desc = 'Navigate with crlt arrows instead of c-d and c-u' })
-vim.keymap.set('v', '<c-Down>', '<c-d>zz', { desc = 'Navigate with crlt arrows instead of c-d and c-u' })
+vim.keymap.set('n', '<c-Up>', '10<Up>zz', { desc = 'Navigate with crlt arrows instead of c-d and c-u' })
+vim.keymap.set('v', '<c-Up>', '10<Up>zz', { desc = 'Navigate with crlt arrows instead of c-d and c-u' })
+vim.keymap.set('n', '<c-Down>', '10<Down>zz', { desc = 'Navigate with crlt arrows instead of c-d and c-u' })
+vim.keymap.set('v', '<c-Down>', '10<Down>zz', { desc = 'Navigate with crlt arrows instead of c-d and c-u' })
 vim.keymap.set('n', 'h', 'v', { desc = 'Use h instead of v for ergo reasons' })
 vim.keymap.set('n', 'H', 'V', { desc = 'Use h instead of v for ergo reasons' })
 vim.keymap.set('v', 'h', 'v', { desc = 'Use h instead of v for ergo reasons' })
