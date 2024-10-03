@@ -123,12 +123,14 @@ imports =
   environment.systemPackages = with pkgs; [
      vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
      wget
+     pkgs.rofi-screenshot
      pkgs.input-remapper
      pkgs.google-chrome
      pkgs.discord
      pkgs.spotify
      pkgs.git
      pkgs.qmk
+     pkgs.tmux
      pkgs.pavucontrol
      pkgs.prusa-slicer
      pkgs.lazygit
@@ -235,10 +237,11 @@ imports =
     cf = "git --git-dir=$HOME/dotfiles/ --work-tree=$HOME";
     rswap = "rm ~/.local/state/nvim/swap/*.swp";
     cl = "clear";
-    qb = "qmk flash -kb bastardkb/skeletyl/v2/splinky_3  -km  rollercole_bodge_version";
+    qb = "qmk flash -kb bastardkb/skeletyl -km  rollercole_bodge_version";
     bb = "qmk flash -kb dasbob -km rollercole";
     cc = "cd ~/.cfg";
     sn = "cd ~/stendorf-dotfiles/dotfiles/.config/nvim";
+    v = "nvim";
   };
 
 
