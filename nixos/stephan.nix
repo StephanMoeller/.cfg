@@ -124,6 +124,7 @@ imports =
      vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
      wget
      pkgs.rofi-screenshot
+     pkgs.showmethekey
      pkgs.input-remapper
      pkgs.google-chrome
      pkgs.discord
@@ -241,7 +242,8 @@ imports =
     bb = "qmk flash -kb dasbob -km rollercole";
     cc = "cd ~/.cfg";
     sn = "cd ~/stendorf-dotfiles/dotfiles/.config/nvim";
-    v = "nvim";
+    n = "nvim";
+    ta = "tmux new-session -A -s main";
   };
 
 
