@@ -30,10 +30,8 @@ vim.keymap.set('n', '<s-Down>', '<C-w><C-j>', { desc = 'Move focus to the lower 
 vim.keymap.set('n', '<s-Up>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
 
-
-
-
-
+vim.keymap.set('n', 'a', 'i', { desc = 'a <=> i' })
+vim.keymap.set('n', 'i', 'a', { desc = 'a <=> i' })
 
 
 
