@@ -244,6 +244,7 @@ imports =
     sn = "cd ~/stendorf-dotfiles/dotfiles/.config/nvim";
     n = "nvim";
     ta = "tmux new-session -A -s main";
+    e = "exit";
   };
 
 
