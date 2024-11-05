@@ -238,8 +238,8 @@ imports =
     cf = "git --git-dir=$HOME/dotfiles/ --work-tree=$HOME";
     rswap = "rm ~/.local/state/nvim/swap/*.swp";
     cl = "clear";
-    qb = "qmk flash -kb bastardkb/skeletyl -km  rollercole_bodge_version";
-    bb = "qmk flash -kb dasbob -km rollercole";
+    bs = "qmk flash -kb bastardkb/skeletyl -km  rollercole_bodge_version";
+    bc = "qmk flash -kb bastardkb/charybdis/3x5 -km rollercole";
     cc = "cd ~/.cfg";
     sn = "cd ~/stendorf-dotfiles/dotfiles/.config/nvim";
     n = "nvim";
