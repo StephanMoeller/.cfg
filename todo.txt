@@ -1,3 +1,2 @@
-Change alacritty config dir using env files
-learn tmux
-
+- gem og reload alle shortcuts sat op i gnome
+- noter et sted hvordan man viser alle vinduer: vmctrl -l

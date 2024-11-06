@@ -138,6 +138,7 @@ imports =
      pkgs.sshpass
      pkgs.keychain
      pkgs.fuzzel
+     pkgs.jumpapp
      pkgs.fzf
      pkgs.waybar
      pkgs.xclip # clipboard for neovim
