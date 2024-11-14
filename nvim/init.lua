@@ -1,2 +1,26 @@
-print("hey hey hey")
+print("hey hey hey2")
 require("core.mappings")
+
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not (vim.uv or vim.loop).fs_stat(lazypath) then
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable", -- latest stable release
+    lazypath,
+  })
+end
+vim.opt.rtp:prepend(lazypath)
+
+local opts = {}
+local plugins = {
+  { "catppuccin/nvim", name = "catppuccin", priority = 1000 }
+}
+
+require("lazy").setup(plugins, opts)
+
+-- Setup catppuccin as color scheme (it must be mentioned in the plugins above to be configurable below)
+require("catppuccin").setup()
+vim.cmd.colorscheme "catppuccin"
