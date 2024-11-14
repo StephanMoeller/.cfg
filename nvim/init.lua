@@ -24,20 +24,5 @@ vim.opt.rtp:prepend(lazypath)
 -- PLUGINS: various plugins as part of the setup process of lazy.vim
 local opts = {}
 
-require("lazy").setup("plugins") -- This loads the object returned in /lua/plugins.lua
+require("lazy").setup("plugins") -- This loads all files inside /lua/plugins/
 
--- Setup: Telescope
-local builtin = require('telescope.builtin')
-vim.keymap.set('n', '<C-p>', builtin.find_files, {})
-vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
-
--- Setup: Treesitter
-local config = require("nvim-treesitter.configs")
-config.setup({
-  ensure_installed = {"lua", "javascript"},
-  highlight = { enable = true },
-  indent = { enable = true }
-})
-
--- Setup:
-vim.keymap.set('n', '<M-e>', ':Neotree filesystem reveal left<CR>') 
