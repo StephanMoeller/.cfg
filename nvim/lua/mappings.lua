@@ -1,5 +1,4 @@
 vim.g.mapleader = " "
-vim.keymap.set('n', '-', vim.cmd.Ex)
 
 -- Clear highlights on search when pressing <Esc> in normal mode
 --  See `:help hlsearch`
@@ -78,4 +77,7 @@ vim.keymap.set("n", "<a-Up>", "V:m '<-2<CR>gv=gv<Esc>", { desc = "Move selected 
 --" ctrl i: back
 --" ctrl o: forward
 --" alt a: Close other tabs
-
+vim.keymap.set('n', '<M-Left>', '<c-w>h', { desc = 'Move focus left' })
+vim.keymap.set('n', '<M-Down>', '<c-w>j', { desc = 'Move focus down' })
+vim.keymap.set('n', '<M-Up>', '<c-w>k', { desc = 'Move focus up' })
+vim.keymap.set('n', '<M-Right>', '<c-w>l', { desc = 'Move focus right' })
