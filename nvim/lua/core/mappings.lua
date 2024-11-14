@@ -1,3 +1,6 @@
+
+vim.keymap.set('n', '-', vim.cmd.Ex)
+
 -- Clear highlights on search when pressing <Esc> in normal mode
 --  See `:help hlsearch`
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
@@ -50,9 +53,9 @@ vim.keymap.set('n', '<Home>', '<Home>_', { desc = 'Home => first non space' })
 vim.keymap.set('v', '<Home>', '<Home>_', { desc = 'Home => first non space' })
 vim.keymap.set('i', '<Home>', '<esc><home>_i', { desc = 'Home => first non space' })
 vim.keymap.set('n', '<End>', 'g_', { desc = 'End => last non space' })
-vim.keymap.set('v', '<End>', 'g_', { desc = 'End => last non space' })
 vim.keymap.set('i', '<End>', '<esc>g_a', { desc = 'End => last non space' })
 vim.keymap.set('n', '<c-a>', 'ggvG', { desc = 'Select all' })
+vim.keymap.set('v', '<End>', 'g_', { desc = 'End => last non space' })
 vim.keymap.set('n', '<c-z>', 'zz', { desc = 'Select all' })
 vim.keymap.set('n', '<c-Up>', '10<Up>zz', { desc = 'Navigate with crlt arrows instead of c-d and c-u' })
 vim.keymap.set('v', '<c-Up>', '10<Up>zz', { desc = 'Navigate with crlt arrows instead of c-d and c-u' })
