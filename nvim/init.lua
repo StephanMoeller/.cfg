@@ -1,4 +1,9 @@
-require("core.mappings")
+vim.cmd("set expandtab")
+vim.cmd("set tabstop=2")
+vim.cmd("set softtabstop=2")
+vim.cmd("set shiftwidth=2")
+
+require("mappings")
 
 -- Tutorial: https://www.youtube.com/watch?v=zHTeCSVAFNY
 
@@ -20,10 +25,6 @@ vim.opt.rtp:prepend(lazypath)
 local opts = {}
 
 require("lazy").setup("plugins") -- This loads the object returned in /lua/plugins.lua
-
--- Setup: Colorscheme
-require("catppuccin").setup()
-vim.cmd.colorscheme "catppuccin"
 
 -- Setup: Telescope
 local builtin = require('telescope.builtin')
