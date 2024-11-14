@@ -3,6 +3,7 @@ vim.cmd("set tabstop=2")
 vim.cmd("set softtabstop=2")
 vim.cmd("set shiftwidth=2")
 
+vim.opt.undofile = true
 require("mappings")
 
 -- Tutorial: https://www.youtube.com/watch?v=zHTeCSVAFNY
