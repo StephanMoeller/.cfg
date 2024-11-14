@@ -1,4 +1,4 @@
-
+vim.g.mapleader = " "
 vim.keymap.set('n', '-', vim.cmd.Ex)
 
 -- Clear highlights on search when pressing <Esc> in normal mode
