@@ -18,27 +18,8 @@ vim.opt.rtp:prepend(lazypath)
 
 -- PLUGINS: various plugins as part of the setup process of lazy.vim
 local opts = {}
-local plugins = {
-  -- Catppuccin = Colorscheme
-  { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
 
-  -- Telescope = File jumping
-  { 'nvim-telescope/telescope.nvim', tag = '0.1.6', dependencies = { 'nvim-lua/plenary.nvim' } }, 
-  {"nvim-treesitter/nvim-treesitter", build= ":TSUpdate"}, -- no idea
-
-  -- Neo-tree = File tree explorer:
-  {
-    "nvim-neo-tree/neo-tree.nvim",
-    branch = "v3.x",
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-      "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
-      "MunifTanjim/nui.nvim",
-      -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
-    }
-  }
-}
-require("lazy").setup(plugins, opts)
+require("lazy").setup("plugins") -- This loads the object returned in /lua/plugins.lua
 
 -- Setup: Colorscheme
 require("catppuccin").setup()
