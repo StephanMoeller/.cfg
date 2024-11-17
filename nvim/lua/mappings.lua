@@ -1,6 +1,6 @@
 vim.g.mapleader = "\r"
 vim.keymap.set('n', ' ', '<cr>',  {remap = true}) 
-
+vim.keymap.set('v', ' ', '<cr>',  {remap = true}) 
   
 -- Clear highlights on search when pressing <Esc> in normal mode
 --  See `:help hlsearch`
@@ -88,8 +88,6 @@ vim.keymap.set('n', '<C-S>', ':wa<Enter>', { desc = 'save all files' })
 vim.keymap.set('v', '<C-S>', ':wa<Enter>', { desc = 'save all files' })
 vim.keymap.set('i', '<C-S>', '<Esc>:wa<Enter>a', { desc = 'save all files' })
 
-vim.keymap.set('n', '<C-Q>', ':q<Enter>', { desc = 'save all files' })
-vim.keymap.set('v', '<C-Q>', '<Esc>:q<Enter>', { desc = 'save all files' })
-vim.keymap.set('i', '<C-Q>', '<Esc>:q<Enter>', { desc = 'save all files' })
+vim.keymap.set('n', '<C-Q>', ':q!<Enter>', { desc = 'save all files' })
 
  

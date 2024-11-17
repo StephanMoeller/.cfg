@@ -164,6 +164,9 @@ imports =
      pkgs.unzip # required by nvim kickstart
      pkgs.ripgrep # required by nvim kickstart
      pkgs.gcc # required by nvim kickstart
+     pkgs.gparted
+     pkgs.ncdu
+     pkgs.lua-language-server  
   ];
 
 
