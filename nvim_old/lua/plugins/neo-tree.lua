@@ -1,4 +1,4 @@
--- neo-tree = file tree explorer:
+-- Neo-tree = File tree explorer:
 return {
     "nvim-neo-tree/neo-tree.nvim",
     branch = "v3.x",
@@ -9,8 +9,6 @@ return {
       -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
     },
     config = function()
-      vim.keymap.set('n', '<M-e>', ':Neotree filesystem reveal left<CR>')
-      vim.keymap.set('n', '<leader>e', ':Neotree filesystem reveal left<CR>')
-      vim.cmd "Neotree filesystem reveal left"
+      vim.keymap.set('n', '<M-e>', ':Neotree filesystem reveal left<CR>') 
     end
   }
