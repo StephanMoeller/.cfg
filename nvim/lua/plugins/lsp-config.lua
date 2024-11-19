@@ -11,7 +11,7 @@ return {
     "williamboman/mason-lspconfig.nvim",
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = {"lua_ls", "zls"}
+        ensure_installed = {"lua_ls", "zls", "omnisharp"}
       })
     end
   },
@@ -21,6 +21,7 @@ return {
     config = function()
       local lspconfig = require("lspconfig")
       lspconfig.lua_ls.setup({})
+      lspconfig.omnisharp.setup({})
       lspconfig.zls.setup({
         on_attach = function(_, bufnr)
           -- LSP diagnostics setup
