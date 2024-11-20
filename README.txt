@@ -27,7 +27,7 @@ ln -s ~/.cfg/waybar ~/.config/waybar
 ln -s ~/.cfg/hypr ~/.config/hypr
 ln -s ~/.cfg/alacritty ~/.config/alacritty
 ln -s ~/.cfg/nvim ~/.config/nvim
-ln -s ~/.cfg/tmux/.tmux.conf ~/.tmux.conf
+ln -s ~/.cfg/tmux ~/.config/tmux
 
 # update nixos-config/configuration.nix to contain exactly this:
 { config, lib, pkgs, ... }:
