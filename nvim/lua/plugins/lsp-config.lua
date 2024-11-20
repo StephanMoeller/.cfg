@@ -11,7 +11,9 @@ return {
     "williamboman/mason-lspconfig.nvim",
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = {"lua_ls", "zls", "omnisharp"}
+        ensure_installed = {}
+        --outcommented the following as mason install using dynamically linked something something which does not work on nixos
+        --ensure_installed = {"lua_ls"}
       })
     end
   },
@@ -20,24 +22,10 @@ return {
     "neovim/nvim-lspconfig",
     config = function()
       local lspconfig = require("lspconfig")
-      lspconfig.lua_ls.setup({})
-      lspconfig.omnisharp.setup({})
-      lspconfig.zls.setup({
-        on_attach = function(_, bufnr)
-          -- LSP diagnostics setup
-          vim.diagnostic.config({
-            virtual_text = true,  -- Enable inline diagnostics
-            signs = true,         -- Show error/warning signs
-            underline = true,     -- Underline errors
-            update_in_insert = false,  -- Update diagnostics only when not in insert mode
-          })
-
-          -- Keybindings for diagnostics (optional)
-          vim.api.nvim_buf_set_keymap(bufnr, 'n', '[d', '<cmd>lua vim.diagnostic.goto_prev()<CR>', { noremap = true, silent = true })
-        vim.api.nvim_buf_set_keymap(bufnr, 'n', ']d', '<cmd>lua vim.diagnostic.goto_next()<CR>', { noremap = true, silent = true })
-        vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>e', '<cmd>lua vim.diagnostic.open_float()<CR>', { noremap = true, silent = true })
-        end,
+      lspconfig.lua_ls.setup({
+        cmd = { "lua-language-server" }
       })
+      vim.keymap.set('n', '<leader>i', vim.lsp.buf.hover, {}) 
     end
   }
 }
