@@ -28,6 +28,8 @@ ln -s ~/.cfg/hypr ~/.config/hypr
 ln -s ~/.cfg/alacritty ~/.config/alacritty
 ln -s ~/.cfg/nvim ~/.config/nvim
 ln -s ~/.cfg/tmux ~/.config/tmux
+ln -s ~/.cfg/bash/.bashrc ~/.bashrc
+ln -s ~/.cfg/bash/.bash_profile ~/.bash_profile
 
 # update nixos-config/configuration.nix to contain exactly this:
 { config, lib, pkgs, ... }:
