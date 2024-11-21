@@ -2,27 +2,41 @@
 
 if [[ $# -eq 1 ]]; then
     selected=$1
+    echo "selection A"
 else
     selected=$(find ~/.cfg ~/work/builds ~/projects ~/ ~/work ~/personal ~/personal/yt -mindepth 1 -maxdepth 1 -type d | fzf)
+    echo "selection B"
 fi
 
 if [[ -z $selected ]]; then
+    echo "none selected"
     exit 0
 fi
 
 selected_name=$(basename "$selected" | tr . _)
-tmux_running=$(pgrep tmux)
-
-if [[ -z $TMUX ]] && [[ -z $tmux_running ]]; then
+echo "running"
+if [ "$TERM_PROGRAM" = tmux ]; then
+    if ! tmux has-session -t=$selected_name 2> /dev/null; then
+      echo "Case 1: Inside tmux but session not found. Creating new session with name $selected_name"  
+      tmux new -ds $selected_name -c $selected
+      tmux switch-client -t $selected_name
+    else  
+      echo "Case 2: Inside tmux and session found. switching to session $selected_name"
+      tmux switch-client -t $selected_name
+    fi
+else
+  tmux_running=$(pgrep tmux)
+  if [[ -z $tmux_running ]]; then
+    echo "Case 3: Tmux not running. Create new session with the name $selected_name"
     tmux new-session -s $selected_name -c $selected
-    exit 0
+  else
+    if ! tmux has-session -t=$selected_name 2> /dev/null; then
+      echo "Case 4: Outside tmux, but tmux is running but session not found. Creating new session with the name $selected_name"  
+      tmux new-session -s $selected_name -c $selected
+    else  
+      echo "Case 5: Outside tmux, but tmux is running and session found. attaching to session with name $selected_name"
+      tmux attach -t $selected_name
+    fi
+  fi
 fi
 
-if ! tmux has-session -t=$selected_name 2> /dev/null; then
-    tmux new-session -ds $selected_name -c $selected
-fi
-
-tmux switch-client -t $selected_name
-echo "started ($selected_name)"
-
-# https://github.com/ThePrimeagen/.dotfiles/blob/master/bin/.local/scripts/tmux-sessionizer
