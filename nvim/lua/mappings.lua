@@ -1,12 +1,13 @@
 
-vim.opt.title = true
-vim.opt.titlelen = 0 -- do not shorten title
-vim.opt.titlestring = 'nvim'
-
 vim.g.mapleader = "\r"
 vim.keymap.set('n', ' ', '<cr>',  {remap = true}) 
 vim.keymap.set('v', ' ', '<cr>',  {remap = true}) 
   
+-- Be able to switch session while inside nvim
+vim.keymap.set('n', '<C-f>', '<cmd>silent !tmux neww ~/.cfg/tmux/tmux-sessionizer<cr>')
+vim.keymap.set('v', '<C-f>', '<cmd>silent !tmux neww ~/.cfg/tmux/tmux-sessionizer<cr>')
+vim.keymap.set('i', '<C-f>', '<cmd>silent !tmux neww ~/.cfg/tmux/tmux-sessionizer<cr>')
+
 -- Clear highlights on search when pressing <Esc> in normal mode
 --  See `:help hlsearch`
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
