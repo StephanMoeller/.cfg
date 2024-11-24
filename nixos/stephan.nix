@@ -166,7 +166,8 @@ imports =
      pkgs.gcc # required by nvim kickstart
      pkgs.gparted
      pkgs.ncdu
-     pkgs.lua-language-server  
+     pkgs.lua-language-server
+     pkgs.vimPlugins.vim-tmux-navigator
   ];
 
 

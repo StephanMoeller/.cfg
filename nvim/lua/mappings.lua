@@ -80,10 +80,11 @@ vim.keymap.set("n", "<a-Up>", "V:m '<-2<CR>gv=gv<Esc>", { desc = "Move selected 
 --" ctrl i: back
 --" ctrl o: forward
 --" alt a: Close other tabs
-vim.keymap.set('n', '<M-Left>', '<c-w>h', { desc = 'Move focus left' })
-vim.keymap.set('n', '<M-Down>', '<c-w>j', { desc = 'Move focus down' })
-vim.keymap.set('n', '<M-Up>', '<c-w>k', { desc = 'Move focus up' })
-vim.keymap.set('n', '<M-Right>', '<c-w>l', { desc = 'Move focus right' })
+--
+--vim.keymap.set('n', '<M-Left>', '<c-w>h', { desc = 'Move focus left' })
+--vim.keymap.set('n', '<M-Down>', '<c-w>j', { desc = 'Move focus down' })
+--vim.keymap.set('n', '<M-Up>', '<c-w>k', { desc = 'Move focus up' })
+--vim.keymap.set('n', '<M-Right>', '<c-w>l', { desc = 'Move focus right' })
 
 vim.keymap.set('n', '<C-S>', ':wa<Enter>', { desc = 'save all files' })
 vim.keymap.set('v', '<C-S>', ':wa<Enter>', { desc = 'save all files' })
