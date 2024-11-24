@@ -1,13 +1,12 @@
 
-vim.g.mapleader = "\r"
-vim.keymap.set('n', ' ', '<cr>',  {remap = true}) 
-vim.keymap.set('v', ' ', '<cr>',  {remap = true}) 
+vim.g.mapleader = " "
   
 -- Clear highlights on search when pressing <Esc> in normal mode
 --  See `:help hlsearch`
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
-
--- Diagnostic keymaps
+vim
+keymapvim
+--  keymaps
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
 
 -- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
@@ -29,11 +28,6 @@ vim.keymap.set('n', '<C-M-PageDown>', ':bnext<CR>', { desc = 'Move focus to the 
 --  Use CTRL+<hjkl> to switch between windows
 --
 --  See `:help wincmd` for a list of all window commands
-vim.keymap.set('n', '<s-Left>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
-vim.keymap.set('n', '<s-Right>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
-vim.keymap.set('n', '<s-Down>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
-vim.keymap.set('n', '<s-Up>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
-
 
 -- PROGRAMMING: Add comma and semicolon to the end of the current line
 vim.keymap.set('n', ';', 'mzA;<Esc>`z<Down>', { desc = 'Add ; to the end of the current line' })
