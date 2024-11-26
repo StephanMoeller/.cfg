@@ -67,4 +67,8 @@ vim.keymap.set('i', '<C-S>', '<Esc>:wa<Enter>a', { desc = 'save all files' })
 
 vim.keymap.set('n', '<C-Q>', ':q!<Enter>', { desc = 'save all files' })
 
- 
+      vim.keymap.set('n', '<leader>i', vim.lsp.buf.hover, {}) 
+			vim.keymap.set("n", "<c-e>", vim.lsp.buf.definition, {})
+			vim.keymap.set("n", "<c-n>", vim.lsp.buf.implementation, {})
+      vim.keymap.set("n", "<m-c-e>", vim.lsp.buf.references, {})
+			vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, {})

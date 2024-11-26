@@ -4,7 +4,7 @@ if [[ $# -eq 1 ]]; then
     selected=$1
     #echo "selection A"
 else
-    selected=$(find /var/log ~/.cfg ~/work/builds ~/projects ~/ ~/work ~/personal ~/personal/yt -mindepth 1 -maxdepth 1 -type d | fzf)
+    selected=$(find ~/Projects /var/log ~/.cfg ~/work/builds ~/projects ~/ ~/work ~/personal ~/personal/yt -mindepth 1 -maxdepth 1 -type d | fzf)
 #    echo "selection B $selected"
 fi
 

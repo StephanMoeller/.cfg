@@ -157,17 +157,20 @@ imports =
      xbindkeys
      docker
      inetutils
-     dotnetCorePackages.sdk_8_0_2xx
+     dotnetCorePackages.sdk_8_0_3xx
+     unstable.dotnetCorePackages.sdk_9_0
+     unstable.dotnetCorePackages.sdk_8_0_3xx
      unstable.neovim # required by nvim kickstart
      unstable.zig
      unstable.zls
+     unstable.csharp-ls
+     unstable.cmp_nvim_lsp
      unzip # required by nvim kickstart
      ripgrep # required by nvim kickstart
      gcc # required by nvim kickstart
      gparted
      ncdu
      lua-language-server
-     csharp-ls
      vimPlugins.vim-tmux-navigator
   ];
 
