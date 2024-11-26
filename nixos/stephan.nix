@@ -123,51 +123,52 @@ imports =
   environment.systemPackages = with pkgs; [
      vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
      wget
-     pkgs.rofi-screenshot
-     pkgs.showmethekey
-     pkgs.input-remapper
-     pkgs.google-chrome
-     pkgs.discord
-     pkgs.spotify
-     pkgs.git
-     pkgs.qmk
-     pkgs.tmux
-     pkgs.pavucontrol
-     pkgs.prusa-slicer
-     pkgs.lazygit
-     pkgs.sshpass
-     pkgs.keychain
-     pkgs.fuzzel
-     pkgs.jumpapp
-     pkgs.fzf
-     pkgs.waybar
-     pkgs.xclip # clipboard for neovim
-     pkgs.jetbrains.rider
-     pkgs.jetbrains.rust-rover
-     pkgs.gnumake
-     pkgs.go
-     pkgs.toybox #to provide pgrep
-     pkgs.rustc
-     pkgs.cargo
-     pkgs.jetbrains.goland
-     pkgs.alacritty
-     unstable.zig
+     rofi-screenshot
+     showmethekey
+     input-remapper
+     google-chrome
+     discord
+     spotify
+     git
+     qmk
+     tmux
+     pavucontrol
+     prusa-slicer
+     lazygit
+     sshpass
+     keychain
+     fuzzel
+     jumpapp
+     fzf
+     waybar
+     xclip # clipboard for neovim
+     jetbrains.rider
+     jetbrains.rust-rover
+     gnumake
+     go
+     toybox #to provide pgrep
+     rustc
+     cargo
+     jetbrains.goland
+     alacritty
 # chatgpt told me to add those: https://chatgpt.com/c/358f8650-7df3-4c60-920c-409912acee4a
      wmctrl
      xdotool
      xbindkeys
-     zig
      docker
      inetutils
-     pkgs.dotnetCorePackages.sdk_8_0_2xx
+     dotnetCorePackages.sdk_8_0_2xx
      unstable.neovim # required by nvim kickstart
-     pkgs.unzip # required by nvim kickstart
-     pkgs.ripgrep # required by nvim kickstart
-     pkgs.gcc # required by nvim kickstart
-     pkgs.gparted
-     pkgs.ncdu
-     pkgs.lua-language-server
-     pkgs.vimPlugins.vim-tmux-navigator
+     unstable.zig
+     unstable.zls
+     unzip # required by nvim kickstart
+     ripgrep # required by nvim kickstart
+     gcc # required by nvim kickstart
+     gparted
+     ncdu
+     lua-language-server
+     csharp-ls
+     vimPlugins.vim-tmux-navigator
   ];
 
 

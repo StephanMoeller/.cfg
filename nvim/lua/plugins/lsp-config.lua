@@ -1,4 +1,4 @@
-return {
+return { 
   {
     -- mason is a "portable package manager" whatever that means...
     "williamboman/mason.nvim",
@@ -27,5 +27,7 @@ return {
       })
       vim.keymap.set('n', '<leader>i', vim.lsp.buf.hover, {}) 
     end
-  }
+  },
+-- lazy.nvim
+
 }
