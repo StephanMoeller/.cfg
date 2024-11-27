@@ -143,7 +143,6 @@ imports =
      waybar
      xclip # clipboard for neovim
      jetbrains.rider
-     jetbrains.rust-rover
      gnumake
      go
      toybox #to provide pgrep
@@ -164,7 +163,6 @@ imports =
      unstable.zig
      unstable.zls
      unstable.csharp-ls
-     unstable.cmp_nvim_lsp
      unzip # required by nvim kickstart
      ripgrep # required by nvim kickstart
      gcc # required by nvim kickstart
