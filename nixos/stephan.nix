@@ -143,6 +143,7 @@ imports =
      waybar
      xclip # clipboard for neovim
      jetbrains.rider
+     jetbrains.idea-ultimate
      gnumake
      go
      toybox #to provide pgrep
