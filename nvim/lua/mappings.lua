@@ -60,6 +60,7 @@ vim.keymap.set('n', 'h', 'v', { desc = 'Use h instead of v for ergo reasons' })
 vim.keymap.set('n', '<c-h>', '<c-v>', { desc = 'Use h instead of v for ergo reasons' })
 vim.keymap.set('v', 'h', 'v', { desc = 'Use h instead of v for ergo reasons' })
 vim.keymap.set('v', 'H', 'V', { desc = 'Use h instead of v for ergo reasons' })
+vim.keymap.set('n', 'yw', 'yiw', { desc = 'faster yank in word' })
 
 vim.keymap.set('n', '<C-S>', ':wa<Enter>', { desc = 'save all files' })
 vim.keymap.set('v', '<C-S>', ':wa<Enter>', { desc = 'save all files' })
