@@ -21,11 +21,13 @@ vim.keymap.set('n', '<a-b>', ':Neotree buffers right<Enter>', { desc = 'Show buf
 vim.keymap.set('n', '<C-M-PageUp>', ':bprevious<CR>', { desc = 'Move focus to the upper window' })
 vim.keymap.set('n', '<C-M-PageDown>', ':bnext<CR>', { desc = 'Move focus to the upper window' })
 
-
 -- Keybinds to make split navigation easier.
 --  Use CTRL+<hjkl> to switch between windows
 --
 --  See `:help wincmd` for a list of all window commands
+
+vim.wo.relativenumber = true
+vim.wo.number = true
 
 -- PROGRAMMING: Add comma and semicolon to the end of the current line
 vim.keymap.set('n', ';', 'mzA;<Esc>`z<Down>', { desc = 'Add ; to the end of the current line' })
