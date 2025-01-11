@@ -5,6 +5,7 @@ vim.cmd("set shiftwidth=2")
 
 vim.opt.undofile = true
 require("mappings")
+vim.opt.updatetime = 5
 
 -- Tutorial: https://www.youtube.com/watch?v=zHTeCSVAFNY
 

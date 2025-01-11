@@ -164,6 +164,7 @@ imports =
      unstable.zig
      unstable.zls
      unstable.csharp-ls
+     kicad
      unzip # required by nvim kickstart
      ripgrep # required by nvim kickstart
      gcc # required by nvim kickstart
