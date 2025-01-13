@@ -58,9 +58,9 @@ vim.keymap.set('v', '<c-Up>', '10<Up>zz', { desc = 'Navigate with crlt arrows in
 vim.keymap.set('n', '<c-Down>', '10<Down>', { desc = 'Navigate with crlt arrows instead of c-d and c-u' })
 vim.keymap.set('v', '<c-Down>', '10<Down>zz', { desc = 'Navigate with crlt arrows instead of c-d and c-u' })
 
-vim.keymap.set('n', 's', 'v', { desc = 'Use h instead of v for ergo reasons' })
-vim.keymap.set('n', '<c-s>', '<c-v>', { desc = 'Use h instead of v for ergo reasons' })
-vim.keymap.set('n', 'S', 'V', { desc = 'Use h instead of v for ergo reasons' })
+vim.keymap.set('n', 'h', 'v', { desc = 'Use h instead of v for ergo reasons' })
+vim.keymap.set('n', '<c-h>', '<c-v>', { desc = 'Use h instead of v for ergo reasons' })
+vim.keymap.set('n', 'H', 'V', { desc = 'Use h instead of v for ergo reasons' })
 
 vim.keymap.set('n', '<C-S>', ':wa<Enter>', { desc = 'save all files' })
 vim.keymap.set('v', '<C-S>', ':wa<Enter>', { desc = 'save all files' })
