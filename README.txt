@@ -32,3 +32,4 @@ ln -s ~/.cfg/bash/.bashrc ~/.bashrc
 ln -s ~/.cfg/bash/.bash_profile ~/.bash_profile
 alias ta="tmux new-session -A -s main"
 alias e=exit
+alias n=nvim
