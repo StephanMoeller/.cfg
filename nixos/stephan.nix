@@ -164,6 +164,7 @@ imports =
      unstable.zig
      unstable.zls
      unstable.csharp-ls
+     unstable.gopls
      kicad
      unzip # required by nvim kickstart
      ripgrep # required by nvim kickstart
@@ -171,6 +172,7 @@ imports =
      gparted
      ncdu
      lua-language-server
+     vscode
      vimPlugins.vim-tmux-navigator
   ];
 

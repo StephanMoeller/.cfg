@@ -9,6 +9,7 @@ return {
         cmd = { "lua-language-server" }
       })
       lspconfig.zls.setup{}
+      lspconfig.gopls.setup{}
       lspconfig.csharp_ls.setup({ 
       --  capabilities = capabilities 
       })
