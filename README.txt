@@ -25,28 +25,10 @@ cd ~/.cfg
 git clone (...this repo...)
 
 # create symlinks:
-ln -s ~/.cfg/waybar ~/.config/waybar
-ln -s ~/.cfg/hypr ~/.config/hypr
 ln -s ~/.cfg/alacritty ~/.config/alacritty
 ln -s ~/.cfg/nvim ~/.config/nvim
 ln -s ~/.cfg/tmux ~/.config/tmux
 ln -s ~/.cfg/bash/.bashrc ~/.bashrc
 ln -s ~/.cfg/bash/.bash_profile ~/.bash_profile
-
-# update nixos-config/configuration.nix to contain exactly this:
-{ config, lib, pkgs, ... }:
-{
-  imports =
-    [ # Include the results of the hardware scan.
-      /etc/nixos/hardware-configuration.nix
-      <home-manager/nixos>
-      /home/stephan/.cfg/stephan.nix
-    ];
-}
-
-# run a nixos build:
-sudo nix-channel --update
-sudo nixos-rebuild switch
-
-# after the first build, future rebuilds can be run by simply running:
-nb
+alias ta="tmux new-session -A -s main"
+alias e=exit
