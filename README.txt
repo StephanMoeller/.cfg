@@ -33,3 +33,5 @@ ln -s ~/.cfg/bash/.bash_profile ~/.bash_profile
 alias ta="tmux new-session -A -s main"
 alias e=exit
 alias n=nvim
+
+# Install a nerd font: https://gist.github.com/matthewjberger/7dd7e079f282f8138a9dc3b045ebefa0
