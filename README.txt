@@ -9,6 +9,8 @@ Setup qmk to have easy workspace switching and move-around-logic
 
 ~/.ssh/config
 
+Remember to run: sudo chmod 600 github_stephanmoeller to increase security on the key file
+
 # add these 3 lines content to the file to allow ssh to always work in hyperland where github_stephanmoeller is the name of the private ssh key to use:
 
 Host *
