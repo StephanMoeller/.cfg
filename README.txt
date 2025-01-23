@@ -34,4 +34,10 @@ alias ta="tmux new-session -A -s main"
 alias e=exit
 alias n=nvim
 
-# Install a nerd font: https://gist.github.com/matthewjberger/7dd7e079f282f8138a9dc3b045ebefa0
+# Install a nerd font:
+
+wget -P ~/.local/share/fonts https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/JetBrainsMono.zip \
+&& cd ~/.local/share/fonts \
+&& unzip JetBrainsMono.zip \
+&& rm JetBrainsMono.zip \
+&& fc-cache -fv
