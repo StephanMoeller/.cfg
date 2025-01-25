@@ -28,6 +28,8 @@ git clone (...this repo...)
 ln -s ~/.cfg/ghostty ~/.config/ghostty
 ln -s ~/.cfg/nvim ~/.config/nvim
 ln -s ~/.cfg/tmux ~/.config/tmux
+ln -s ~/.cfg/sway ~/.config/sway
+ln -s ~/.cfg/waybar ~/.config/waybar
 ln -s ~/.cfg/bash/.bashrc ~/.bashrc
 ln -s ~/.cfg/bash/.bash_profile ~/.bash_profile
 alias ta="tmux new-session -A -s main"
