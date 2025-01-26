@@ -5,7 +5,7 @@ startcommand="$2"
 # Check if program is running
 if hyprctl clients | grep class | grep $windowname > /dev/null; then
     echo "focused"
-    # If Discord is running, find the window and focus it
+    # If program is running, find the window and focus it
     hyprctl dispatch focuswindow $windowname
     hyprctl dispatch bringactivetotop 
 else
@@ -13,3 +13,4 @@ else
     echo "starting"
     $startcommand
 fi
+
