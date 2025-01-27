@@ -1,2 +1,4 @@
-- gem og reload alle shortcuts sat op i gnome
-- noter et sted hvordan man viser alle vinduer: vmctrl -l
+- Sæt shortcuts i gnome via nixos
+- Sæt genveje op til goland, spotify
+- Installer Tiling Shell via nixos
+- Installer scripts via nixos og ikke via git repo - de er tæt forbundet til de genveje der skal sættes op via nixos
