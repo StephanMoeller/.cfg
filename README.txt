@@ -25,7 +25,7 @@ cd ~/.cfg
 git clone (...this repo...)
 
 # create symlinks:
-ln -s ~/.cfg/ghostty ~/.config/ghostty
+ln -s ~/.cfg/alacritty ~/.config/alacritty
 ln -s ~/.cfg/nvim ~/.config/nvim
 ln -s ~/.cfg/tmux ~/.config/tmux
 ln -s ~/.cfg/sway ~/.config/sway
