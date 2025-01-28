@@ -1,14 +1,14 @@
 [font]
-size = 11.0
+size = 12.00
 [font.bold]
-family = "monospace"
+family = "JetBrainsMono Nerd Font Mono"
 style = "Bold"
 [font.bold_italic]
-family = "monospace"
+family = "JetBrainsMono Nerd Font Mono"
 style = "Bold Italic"
 [font.italic]
-family = "monospace"
+family = "JetBrainsMono Nerd Font Mono"
 style = "Italic"
 [font.normal]
-family = "monospace"
-style = "Regular"
+family = "JetBrainsMono Nerd Font Mono"
+style = "Normal"
