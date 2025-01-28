@@ -123,7 +123,11 @@ imports =
   environment.systemPackages = with pkgs; [
      vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
      wget
-     rofi-screenshot
+
+     grim # screenshot app
+     slurp
+     wl-clipboard
+
      showmethekey
      input-remapper
      google-chrome
@@ -141,7 +145,6 @@ imports =
      jumpapp
      fzf
      waybar
-     xclip # clipboard for neovim
      jetbrains.rider
      jetbrains.rust-rover
      gnumake
