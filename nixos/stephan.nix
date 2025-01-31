@@ -177,6 +177,8 @@ imports =
      lua-language-server
      vscode
      vimPlugins.vim-tmux-navigator
+
+     blueman #bluetooth manager
   ];
 
 
