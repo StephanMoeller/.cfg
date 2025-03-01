@@ -72,6 +72,10 @@ imports =
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
+  # bluetooth - from: https://nixos.wiki/wiki/Bluetooth
+  hardware.bluetooth.enable = true; # enables support for Bluetooth
+  hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
+
   # Enable sound with pipewire.
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
@@ -148,8 +152,8 @@ imports =
      jumpapp
      fzf
      waybar
-     jetbrains.rider
-     jetbrains.rust-rover
+     #jetbrains.rider
+     #jetbrains.rust-rover
      gnumake
      go
      toybox #to provide pgrep
