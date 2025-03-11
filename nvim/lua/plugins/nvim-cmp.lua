@@ -6,9 +6,20 @@ return {
 			["<CR>"] = require("cmp").mapping.confirm({ select = true }),
 			["<Tab>"] = require("cmp").mapping.select_next_item({ behavior = require("cmp").SelectBehavior.Select }),
 			["<S-Tab>"] = require("cmp").mapping.select_prev_item({ behavior = require("cmp").SelectBehavior.Select }),
-        ["<Down>"] = require("cmp").mapping.select_next_item({ behavior = require("cmp").SelectBehavior.Select }),
+      ["<Down>"] = require("cmp").mapping.select_next_item({ behavior = require("cmp").SelectBehavior.Select }),
 			["<Up>"] = require("cmp").mapping.select_prev_item({ behavior = require("cmp").SelectBehavior.Select }),
+      ["."] = require("cmp").mapping(function(fallback)
+        if require("cmp").visible() then
+          require("cmp").confirm({ select = true })  -- Confirm first suggestion
+          vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes(".", true, true, true), "n", true)
+        else
+          fallback()
+        end
+      end, { "i", "s" }),
 		}
+    conf.completion = {
+      completeopt = "menu,menuone,noinsert",
+    }
     conf.findow = {
 				completion = {
 					winhighlight = "Normal:Pmenu,FloatBorder:Pmenu,Search:None",
