@@ -2,20 +2,24 @@ return {
 	"hrsh7th/nvim-cmp",
 	-- enabled = false,
 	opts = function(_, conf)
-		conf.mapping = {
-			["<CR>"] = require("cmp").mapping.confirm({ select = true }),
-			["<Tab>"] = require("cmp").mapping.select_next_item({ behavior = require("cmp").SelectBehavior.Select }),
-			["<S-Tab>"] = require("cmp").mapping.select_prev_item({ behavior = require("cmp").SelectBehavior.Select }),
-      ["<Down>"] = require("cmp").mapping.select_next_item({ behavior = require("cmp").SelectBehavior.Select }),
-			["<Up>"] = require("cmp").mapping.select_prev_item({ behavior = require("cmp").SelectBehavior.Select }),
-      ["."] = require("cmp").mapping(function(fallback)
-        if require("cmp").visible() then
-          require("cmp").confirm({ select = true })  -- Confirm first suggestion
-          vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes(".", true, true, true), "n", true)
+    local cmp = require("cmp")
+    function select_and_type(type_this)
+      return cmp.mapping(function(fallback)
+        if cmp.visible() then
+          cmp.confirm({ select = true })  -- Confirm first suggestion
+          vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes(type_this, true, true, true), "n", true)
         else
           fallback()
         end
-      end, { "i", "s" }),
+      end, { "i", "s" })
+    end
+
+		conf.mapping = {
+			["<CR>"] = select_and_type("<space>"),
+      ["<Down>"] = require("cmp").mapping.select_next_item({ behavior = require("cmp").SelectBehavior.Select }),
+			["<Up>"] = require("cmp").mapping.select_prev_item({ behavior = require("cmp").SelectBehavior.Select }),
+      ["("] = select_and_type("()<Left>"),
+      ["."] = select_and_type("."),
 		}
     conf.completion = {
       completeopt = "menu,menuone,noinsert",
