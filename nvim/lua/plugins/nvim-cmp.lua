@@ -3,6 +3,7 @@ return {
 	-- enabled = false,
 	opts = function(_, conf)
     local cmp = require("cmp")
+
     function select_and_type(type_this)
       return cmp.mapping(function(fallback)
         if cmp.visible() then
@@ -15,7 +16,7 @@ return {
     end
 
 		conf.mapping = {
-			["<CR>"] = select_and_type("<space>"),
+			["<CR>"] = select_and_type(""),
       ["<Down>"] = require("cmp").mapping.select_next_item({ behavior = require("cmp").SelectBehavior.Select }),
 			["<Up>"] = require("cmp").mapping.select_prev_item({ behavior = require("cmp").SelectBehavior.Select }),
       ["("] = select_and_type("()<Left>"),
