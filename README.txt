@@ -3,20 +3,25 @@ TODO:
 
 Setup qmk to have easy workspace switching and move-around-logic
 
+# Install programs
+- 1password
+- chrome
+- tmux
+- neovim
+- discord
 
+# Install git
 
-# install git and add the ssh key from github to a location and then create this file:
-
-~/.ssh/config
-
-Remember to run: sudo chmod 600 github_stephanmoeller to increase security on the key file
-
-# add these 3 lines content to the file to allow ssh to always work in hyperland where github_stephanmoeller is the name of the private ssh key to use:
+- Create an ssh key on your github account and save the private key in: ~/.ssh/github_stephanmoeller
+- run: sudo chmod 600 github_stephanmoeller to increase security on the key file
+- create file: ~/.ssh/config
+and add the following to this file:
 
 Host *
   AddKeysToAgent yes
   IdentityFile ~/.ssh/github_stephanmoeller
 
+Now clone a private repo to test that everything works :)
 
 # clone this repo like this:
 
