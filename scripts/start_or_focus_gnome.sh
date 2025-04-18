@@ -1,4 +1,4 @@
-#!/run/current-system/sw/bin/bash
+#!/bin/bash
 windowname="$1"
 startcommand="$2"
 wmctrl -a "$windowname"
