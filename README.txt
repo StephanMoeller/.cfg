@@ -32,11 +32,30 @@ win+d => ~/.cfg/scripts/start_or_focus_gnome.sh Discord discord
 win+t => 
 win+c => ~/.cfg/scripts/start_or_focus_gnome.sh Chrome google-chrome-stable
 
+# Create symlinks
+ln -s ~/.cfg/nvim ~/.config/nvim
+ln -s ~/.cfg/tmux ~/.config/tmux
+
+# Install a nerd font:
+
+wget -P ~/.local/share/fonts https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/JetBrainsMono.zip \
+&& cd ~/.local/share/fonts \
+&& unzip JetBrainsMono.zip \
+&& rm JetBrainsMono.zip \
+&& fc-cache -fv
+
+# Solid background color in popos/ubuntu
+gsettings set org.gnome.desktop.background picture-uri none
+gsettings set org.gnome.desktop.background picture-uri-dark none
+gsettings set org.gnome.desktop.background primary-color '#000000'
 
 
-Win+D: 
 
-# clone this repo like this:
+
+
+
+
+# Old stuff from nixos times
 
 mkdir ~/.cfg
 cd ~/.cfg
