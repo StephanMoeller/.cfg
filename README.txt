@@ -23,6 +23,19 @@ Host *
 
 Now clone a private repo to test that everything works :)
 
+# Clone .cfg 
+- clone repo with git
+- Make script file executable: sudo chmod +x ~/.cfg/scripts/start_or_focus_gnome.sh
+
+# Setup shortcuts:
+win+d => ~/.cfg/scripts/start_or_focus_gnome.sh Discord discord
+win+t => 
+win+c => ~/.cfg/scripts/start_or_focus_gnome.sh Chrome google-chrome-stable
+
+
+
+Win+D: 
+
 # clone this repo like this:
 
 mkdir ~/.cfg
