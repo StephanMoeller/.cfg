@@ -1,7 +1,7 @@
 #!/bin/bash
-windowname="$1"
+windowclassname="$1" # find a window class name by calling: wmctrl -lx while the window is open. The class name is the first string on each line.
 startcommand="$2"
-wmctrl -a "$windowname"
+wmctrl -x -a "$windowclassname"
 if [[ "$?" == "1" ]]
 then
   bash -c "$startcommand"
