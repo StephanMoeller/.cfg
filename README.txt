@@ -30,9 +30,9 @@ Now clone a private repo to test that everything works :)
 - Make script file executable: sudo chmod +x ~/.cfg/scripts/start_or_focus_gnome.sh
 
 # Setup shortcuts:
-win+d => ~/.cfg/scripts/start_or_focus_gnome.sh Discord discord
-win+t => 
-win+c => ~/.cfg/scripts/start_or_focus_gnome.sh Chrome google-chrome-stable
+win+d => /home/stephan/.cfg/scripts/start_or_focus_gnome.sh Discord discord
+win+t => /home/stephan/.cfg/scripts/start_or_focus_gnome.sh Alacritty alacritty
+win+c => /home/stephan/.cfg/scripts/start_or_focus_gnome.sh Chrome google-chrome-stable
 
 # Create symlinks
 ln -s ~/.cfg/nvim ~/.config/nvim
