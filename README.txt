@@ -10,6 +10,8 @@ Setup qmk to have easy workspace switching and move-around-logic
 - neovim
 - discord
 
+# Install alacritty and make it the default terminal
+
 # Install git
 
 - Create an ssh key on your github account and save the private key in: ~/.ssh/github_stephanmoeller
@@ -35,6 +37,7 @@ win+c => ~/.cfg/scripts/start_or_focus_gnome.sh Chrome google-chrome-stable
 # Create symlinks
 ln -s ~/.cfg/nvim ~/.config/nvim
 ln -s ~/.cfg/tmux ~/.config/tmux
+ln -s ~/.cfg/alacritty ~/.config/alacritty
 
 # Install a nerd font:
 
@@ -62,7 +65,6 @@ cd ~/.cfg
 git clone (...this repo...)
 
 # create symlinks:
-ln -s ~/.cfg/alacritty ~/.config/alacritty
 ln -s ~/.cfg/nvim ~/.config/nvim
 ln -s ~/.cfg/tmux ~/.config/tmux
 ln -s ~/.cfg/sway ~/.config/sway
