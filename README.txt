@@ -52,6 +52,10 @@ gsettings set org.gnome.desktop.background picture-uri none
 gsettings set org.gnome.desktop.background picture-uri-dark none
 gsettings set org.gnome.desktop.background primary-color '#000000'
 
+# Install qmk
+
+apt install pipx
+pipx install qmk
 
 
 
