@@ -56,6 +56,8 @@ gsettings set org.gnome.desktop.background primary-color '#000000'
 
 apt install pipx
 pipx install qmk
+(follow the instructions in the terminal to add to the path)
+qmk setup
 git clone --recursive git@github.com:StephanMoeller/bastardkb-qmk.gi
 
 
