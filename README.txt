@@ -1,4 +1,5 @@
 
+
 TODO:
 
 Setup qmk to have easy workspace switching and move-around-logic
@@ -56,7 +57,9 @@ gsettings set org.gnome.desktop.background primary-color '#000000'
 
 apt install pipx
 pipx install qmk
-
+(follow the instructions in the terminal to add to the path)
+qmk setup
+git clone --recursive git@github.com:StephanMoeller/bastardkb-qmk.gi
 
 
 
@@ -91,3 +94,4 @@ wget -P ~/.local/share/fonts https://github.com/ryanoasis/nerd-fonts/releases/do
 gsettings set org.gnome.desktop.background picture-uri none
 gsettings set org.gnome.desktop.background picture-uri-dark none
 gsettings set org.gnome.desktop.background primary-color '#000000'
+settings set org.gnome.desktop.background primary-color '#000000'
