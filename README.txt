@@ -61,7 +61,8 @@ pipx install qmk
 qmk setup
 git clone --recursive git@github.com:StephanMoeller/bastardkb-qmk.gi
 
-
+# clear nvim cache
+rm -rf ~/.local/share/nvim && rm -rf ~/.local/state/nvim && rm -rf ~/.cache/nvim
 
 
 
