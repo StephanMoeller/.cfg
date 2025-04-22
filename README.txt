@@ -14,7 +14,6 @@ Setup qmk to have easy workspace switching and move-around-logic
 # Install alacritty and make it the default terminal
 
 # Install git
-
 - Create an ssh key on your github account and save the private key in: ~/.ssh/github_stephanmoeller
 - run: sudo chmod 600 github_stephanmoeller to increase security on the key file
 - create file: ~/.ssh/config
@@ -64,35 +63,9 @@ git clone --recursive git@github.com:StephanMoeller/bastardkb-qmk.gi
 # clear nvim cache
 rm -rf ~/.local/share/nvim && rm -rf ~/.local/state/nvim && rm -rf ~/.cache/nvim
 
-
-
-# Old stuff from nixos times
-
-mkdir ~/.cfg
-cd ~/.cfg
-git clone (...this repo...)
-
-# create symlinks:
-ln -s ~/.cfg/nvim ~/.config/nvim
-ln -s ~/.cfg/tmux ~/.config/tmux
-ln -s ~/.cfg/sway ~/.config/sway
-ln -s ~/.cfg/waybar ~/.config/waybar
-ln -s ~/.cfg/bash/.bashrc ~/.bashrc
-ln -s ~/.cfg/bash/.bash_profile ~/.bash_profile
+# create aliases
 alias ta="tmux new-session -A -s main"
 alias e=exit
 alias n=nvim
-
-# Install a nerd font:
-
-wget -P ~/.local/share/fonts https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/JetBrainsMono.zip \
-&& cd ~/.local/share/fonts \
-&& unzip JetBrainsMono.zip \
-&& rm JetBrainsMono.zip \
-&& fc-cache -fv
-
-# Solid background color in popos/ubuntu
-gsettings set org.gnome.desktop.background picture-uri none
-gsettings set org.gnome.desktop.background picture-uri-dark none
-gsettings set org.gnome.desktop.background primary-color '#000000'
-settings set org.gnome.desktop.background primary-color '#000000'
+alias lg=lazygit
+alias cc="rm -rf ~/.local/share/nvim && rm -rf ~/.local/state/nvim && rm -rf ~/.cache/nvim"
